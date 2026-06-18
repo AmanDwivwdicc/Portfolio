@@ -76,7 +76,7 @@ function About() {
   </a>
 
   <a
-  href="https://leetcode.com/u/YOUR_USERNAME/"
+  href="https://leetcode.com/u/Aman_Dwivedi_123/"
   target="_blank"
   rel="noreferrer"
   className="hover:text-cyan-400 transition"
