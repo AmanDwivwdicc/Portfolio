@@ -97,7 +97,7 @@ function About() {
         >
 
           <motion.img
-            src="/public/profile.png"
+            src="/profile.png"
             alt="Aman Dwivedi"
             className="w-72 md:w-96 rounded-full border-4 border-cyan-500 shadow-2xl"
             animate={{

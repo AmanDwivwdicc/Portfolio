@@ -1,14 +1,14 @@
 const certificates = [
   {
-    image: "/public/cert1.jpeg",
+    image: "/cert1.jpeg",
     title: "Certificate 1"
   },
   {
-    image: "/public/cert2.jpeg",
+    image: "/cert2.jpeg",
     title: "Certificate 2"
   },
   {
-    image: "/public/cert3.jpeg",
+    image: "/cert3.jpeg",
     title: "Certificate 3"
   }
 ];
