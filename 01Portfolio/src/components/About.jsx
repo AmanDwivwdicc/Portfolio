@@ -30,7 +30,15 @@ function About() {
             B.Tech Information Technology Student
           </p>
 
-          <TypeAnimation
+
+          <a
+  href="/resume.pdf"
+  download
+  className="px-8 py-3 bg-cyan-500 rounded-lg font-semibold hover:bg-cyan-400 transition"
+>
+  Download Resume
+</a>
+<TypeAnimation
   sequence={[
     "Full Stack Developer",
     2000,
@@ -46,14 +54,6 @@ function About() {
   repeat={Infinity}
   className="text-2xl text-cyan-400 font-semibold"
 />
-
-          <a
-  href="/resume.pdf"
-  download
-  className="px-8 py-3 bg-cyan-500 rounded-lg font-semibold hover:bg-cyan-400 transition"
->
-  Download Resume
-</a>
 
           <div className="flex gap-6 mt-8 text-3xl">
 
