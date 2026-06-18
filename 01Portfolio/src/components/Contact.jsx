@@ -5,7 +5,7 @@ function Contact() {
       <div className="bg-zinc-900 p-10 rounded-3xl max-w-md w-full text-center">
 
         <img
-          src="/public/profile2.png"
+          src="/profile2.png"
           alt="Aman"
           className="w-36 h-36 rounded-full mx-auto mb-6"
         />
