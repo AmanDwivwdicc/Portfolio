@@ -15,7 +15,7 @@ function Skills() {
   ];
 
   return (
-    <section className="min-h-screen bg-zinc-950 text-white flex flex-col justify-center px-8">
+    <section className="min-h-screen bg-transparent text-white flex flex-col justify-center px-8">
 
       <h2 className="text-5xl font-bold text-center mb-16 text-cyan-400">
         Skills

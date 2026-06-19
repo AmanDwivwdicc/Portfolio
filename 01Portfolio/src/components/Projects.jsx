@@ -4,7 +4,7 @@ import projects from "../data/projects";
 function Projects() {
   return (
     <section
-      className="min-h-screen bg-black text-white px-8 py-24"
+      className="min-h-screen bg-transparent text-white px-8 py-24"
     >
       <h2 className="text-5xl font-bold text-center mb-20 text-cyan-400">
         Projects

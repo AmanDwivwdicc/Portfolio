@@ -3,7 +3,7 @@ import certificates from "../data/certificates";
 
 function Education() {
   return (
-    <section className="min-h-screen bg-zinc-950 text-white px-8 md:px-16 flex items-center pt-24">
+    <section className="min-h-screen bg-transparent text-white px-8 md:px-16 flex items-center pt-24">
 
       <motion.div
   className="max-w-4xl mx-auto"

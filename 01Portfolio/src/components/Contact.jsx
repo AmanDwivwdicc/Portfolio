@@ -2,7 +2,7 @@ function Contact() {
   return (
     <section className="min-h-screen bg-zinc-950 text-white flex flex-col items-center justify-center px-8">
 
-      <div className="bg-zinc-900 p-10 rounded-3xl max-w-md w-full text-center">
+      <div className="bg-transparent p-10 rounded-3xl max-w-md w-full text-center">
 
         <img
           src="/profile2.png"

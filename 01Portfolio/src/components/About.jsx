@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 function About() {
   return (
-    <section className="relative min-h-screen flex items-center px-8 md:px-16 bg-black text-white">
+    <section className="relative min-h-screen flex items-center px-8 md:px-16 bg-transparent text-white">
 
       <div className="max-w-7xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
