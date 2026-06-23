@@ -30,7 +30,15 @@ const projects = [
     description:
       "A full-stack OpenCV project implementing a Harry Potter-style invisibility cloak.",
     link: "https://harry-potter-invisible-cloak.vercel.app/"
-  }
+  },
+
+  {
+  title: "Face Expression Analyser",
+  image: "/face_expression.png",
+  description:
+    "An AI-powered computer vision project that detects human facial expressions in real time using OpenCV and machine learning techniques.",
+  link: "https://face-analyser-project.vercel.app/"
+}
 ];
 
 export default projects;
