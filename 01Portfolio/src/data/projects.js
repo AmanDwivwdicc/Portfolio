@@ -13,7 +13,7 @@ const projects = [
     image: "/shelfshare.png",
     description:
       "A platform for sharing books and study resources among students.",
-    link: "https://github.com/AmanDwivwdicc/shelfshare"
+    link: "https://shelf-share-taupe.vercel.app/login"
   },
 
   {
