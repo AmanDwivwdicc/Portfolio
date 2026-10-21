@@ -1,0 +1,210 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — "Night signal"
+ * Deep ink background, electric cyan signal colour, cool blue + violet
+ * secondary glows (matching the falling-light background).
+ * All colours are oklch tokens; components only use the semantic names.
+ */
+
+@theme inline {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-signal-blue: var(--signal-blue);
+  --color-signal-violet: var(--signal-violet);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-glow: var(--shadow-glow);
+  --shadow-glow-strong: var(--shadow-glow-strong);
+  --shadow-card: var(--shadow-card);
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.13 0.012 250);
+  --foreground: oklch(0.96 0.006 230);
+  --card: oklch(0.17 0.014 250 / 0.72);
+  --card-foreground: oklch(0.96 0.006 230);
+  --popover: oklch(0.17 0.014 250);
+  --popover-foreground: oklch(0.96 0.006 230);
+  --primary: oklch(0.83 0.14 205);
+  --primary-foreground: oklch(0.16 0.03 230);
+  --primary-glow: oklch(0.72 0.16 230);
+  --secondary: oklch(0.22 0.016 250);
+  --secondary-foreground: oklch(0.96 0.006 230);
+  --muted: oklch(0.22 0.016 250);
+  --muted-foreground: oklch(0.7 0.02 240);
+  --accent: oklch(0.25 0.03 220);
+  --accent-foreground: oklch(0.96 0.006 230);
+  --signal-blue: oklch(0.63 0.19 258);
+  --signal-violet: oklch(0.63 0.22 300);
+  --surface: oklch(0.16 0.013 250);
+  --surface-strong: oklch(0.2 0.016 250);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.83 0.14 205);
+  --chart-1: oklch(0.83 0.14 205);
+  --chart-2: oklch(0.63 0.19 258);
+  --chart-3: oklch(0.63 0.22 300);
+  --chart-4: oklch(0.82 0.16 85);
+  --chart-5: oklch(0.7 0.17 160);
+  --sidebar: oklch(0.16 0.013 250);
+  --sidebar-foreground: oklch(0.96 0.006 230);
+  --sidebar-primary: oklch(0.83 0.14 205);
+  --sidebar-primary-foreground: oklch(0.16 0.03 230);
+  --sidebar-accent: oklch(0.22 0.016 250);
+  --sidebar-accent-foreground: oklch(0.96 0.006 230);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.83 0.14 205);
+
+  --gradient-signal: linear-gradient(
+    100deg,
+    var(--primary) 0%,
+    var(--signal-blue) 55%,
+    var(--signal-violet) 100%
+  );
+  --gradient-fade: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--background) 0%, transparent) 0%,
+    var(--background) 100%
+  );
+  --shadow-glow: 0 10px 40px -12px color-mix(in oklab, var(--primary) 70%, transparent);
+  --shadow-glow-strong: 0 16px 50px -10px color-mix(in oklab, var(--primary) 85%, transparent);
+  --shadow-card: 0 30px 60px -30px oklch(0 0 0 / 0.7);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    background-color: var(--color-background);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 40%, transparent);
+    color: var(--foreground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility text-gradient-signal {
+  background-image: var(--gradient-signal);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-signal {
+  background-image: var(--gradient-signal);
+}
+
+@utility bg-fade-bottom {
+  background-image: var(--gradient-fade);
+}
+
+@utility glass-panel {
+  background-color: color-mix(in oklab, var(--surface) 70%, transparent);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@utility caret-blink {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@utility glass-panel-strong {
+  background-color: color-mix(in oklab, var(--surface) 92%, transparent);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
